@@ -222,10 +222,12 @@
         // --- Language / Idioma ---
         let lang = localStorage.getItem('lang') || 'es';
         // URL param overrides localStorage (e.g., ?lang=en or ?lang=es)
+        let hasUrlLang = false;
         try {
             const urlParams = new URLSearchParams(window.location.search);
             const urlLang = urlParams.get('lang');
             if (urlLang && (urlLang === 'en' || urlLang === 'es')) {
+                hasUrlLang = true;
                 lang = urlLang;
                 localStorage.setItem('lang', lang);
             }
@@ -350,7 +352,7 @@
         }
 
         function updateNavigation() {
-            prevBtn.disabled = currentSlide === 0;
+            prevBtn.disabled = (currentSlide === 0) || (hasUrlLang && currentSlide === 1);
             if (currentSlide === slides.length - 1) {
                 nextBtn.textContent = i18n[lang].navRestart;
             } else {
@@ -360,8 +362,10 @@
             prevBtn.textContent = i18n[lang].navPrev;
 
             // Step indicator
-            slideIndicator.textContent = i18n[lang].stepIndicator(currentSlide + 1, slides.length);
-            const progressPercentage = ((currentSlide + 1) / slides.length) * 100;
+            const totalDisplay = slides.length - (hasUrlLang ? 1 : 0);
+            const currentDisplay = (currentSlide + 1) - (hasUrlLang ? 1 : 0);
+            slideIndicator.textContent = i18n[lang].stepIndicator(currentDisplay, totalDisplay);
+            const progressPercentage = (currentDisplay / totalDisplay) * 100;
             progressBar.style.width = `${progressPercentage}%`;
 
             // Disable main Next button during quiz until completion
@@ -380,7 +384,7 @@
         }
 
         function restartPresentation() {
-            currentSlide = 0;
+            currentSlide = hasUrlLang ? 1 : 0;
             showSlide(currentSlide);
             // Reset quiz to initial state
             try { loadQuiz(); } catch (_) {}
@@ -400,6 +404,7 @@
         function prevSlide() {
             if (currentSlide > 0) {
                 currentSlide--;
+                if (hasUrlLang && currentSlide === 0) currentSlide = 1;
                 showSlide(currentSlide);
             }
         }
@@ -605,6 +610,11 @@
 
             createFlipCards();
             applyLanguage();
+            if (hasUrlLang) {
+                const firstSlide = document.querySelector('#presentation-container .slide:nth-child(1)');
+                if (firstSlide) firstSlide.style.display = 'none';
+                currentSlide = 1;
+            }
             showSlide(currentSlide);
         });
     </script>
