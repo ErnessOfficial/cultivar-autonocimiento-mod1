@@ -175,8 +175,8 @@
         </div>
 
         <div class="absolute bottom-24 left-1/2 -translate-x-1/2 text-xs text-gray-500 text-center px-4">
-            este modulo 1 es gratuito. si deseas continuar con tu formacion puedes acceder a la web de Animikdemi :
-            <a href="https://www.animikdemi.entrepalabrasurgentes.com" target="_blank" rel="noopener" class="underline text-indigo-600">www.animikdemi.entrepalabrasurgentes.com</a>.
+            <span id="footer-text">este modulo 1 es gratuito. si deseas continuar con tu formacion puedes acceder a la web de Animikdemi :</span>
+            <a id="footer-link" href="https://www.animikdemi.entrepalabrasurgentes.com" target="_blank" rel="noopener" class="underline text-indigo-600">www.animikdemi.entrepalabrasurgentes.com</a>.
         </div>
 
         <!-- Navegación -->
@@ -217,6 +217,7 @@
         const s3TitleEl = document.getElementById('s3-title');
         const s5TitleEl = document.getElementById('s5-title');
         const s5p1El = document.getElementById('s5-p1');
+        const footerTextEl = document.getElementById('footer-text');
         const slideIndicator = document.getElementById('slide-indicator');
         const progressBar = document.getElementById('progress-bar');
         let currentSlide = 0;
@@ -270,6 +271,8 @@
                 resultsScore: (s, t) => `Has acertado ${s} de ${t} preguntas.`,
                 resultsNote: 'Recuerda que el objetivo principal es la reflexión. ¡Sigue explorando tu mundo interior!',
                 restartQuiz: 'Intentar de nuevo',
+                // Footer
+                footerText: 'este modulo 1 es gratuito. si deseas continuar con tu formacion puedes acceder a la web de Animikdemi :',
             },
             en: {
                 // Global (British English)
@@ -305,6 +308,8 @@
                 resultsScore: (s, t) => `You answered ${s} out of ${t} correctly.`,
                 resultsNote: 'Remember: the main goal is reflection. Keep exploring your inner world!',
                 restartQuiz: 'Try again',
+                // Footer
+                footerText: 'This Module 1 is free. If you wish to continue your training, you can visit the Animikdemi website:',
             }
         };
 
@@ -329,6 +334,7 @@
             if (s5p1El) s5p1El.textContent = i18n[lang].s5p1;
 
             if (quizTitleTextEl) quizTitleTextEl.textContent = i18n[lang].quizTitle;
+            if (footerTextEl) footerTextEl.textContent = i18n[lang].footerText;
 
             // Rebuild language-dependent components
             createFlipCards();
