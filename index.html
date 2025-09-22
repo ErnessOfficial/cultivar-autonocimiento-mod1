@@ -105,44 +105,44 @@
             <!-- Slide 0: Selección de idioma / Language selection -->
             <div class="slide active">
                 <div class="flex flex-col items-center justify-center h-full text-center space-y-6">
-                    <h2 class="text-2xl md:text-3xl font-bold text-indigo-600">Idioma / Language</h2>
-                    <label for="language-select" class="text-gray-700">Selecciona tu idioma / Select your language</label>
+                    <h2 id="lang-heading" class="text-2xl md:text-3xl font-bold text-indigo-600">Idioma</h2>
+                    <label id="lang-label" for="language-select" class="text-gray-700">Selecciona tu idioma</label>
                     <select id="language-select" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         <option value="es">🇪🇸 Español</option>
                         <option value="en">🇬🇧 English</option>
                     </select>
-                    <p class="text-sm text-gray-500">Usa el botón Siguiente para continuar / Use Next to continue</p>
+                    <p id="lang-helper" class="text-sm text-gray-500">Usa el botón Siguiente para continuar</p>
                 </div>
             </div>
 
             <!-- Slide 1: Título -->
             <div class="slide">
                 <div class="flex flex-col items-center justify-center h-full text-center">
-                    <h2 class="text-2xl font-semibold text-indigo-500 mb-4">Módulo 1</h2>
+                    <h2 id="module-label" class="text-2xl font-semibold text-indigo-500 mb-4">Módulo 1</h2>
                     <div class="bg-indigo-600 text-white p-4 rounded-full w-24 h-24 flex items-center justify-center mb-8 shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 18a7 7 0 1 0-7-7c0 1.42.42 2.74 1.17 3.82l-2.06 2.06a1 1 0 0 0 1.41 1.41l2.06-2.06A6.95 6.95 0 0 0 11 18Z"/><path d="m2 2 1.17 1.17"/><path d="M22 22 20 20"/><path d="m2 22 2-2"/><path d="m22 2-2 2"/></svg>
                     </div>
-                    <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Cómo Cultivar tu Autoconocimiento</h1>
-                    <p class="text-xl md:text-2xl text-gray-600">Para una Vida Plena</p>
+                    <h1 id="main-title" class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Cómo Cultivar tu Autoconocimiento</h1>
+                    <p id="main-subtitle" class="text-xl md:text-2xl text-gray-600">Para una Vida Plena</p>
                 </div>
             </div>
 
             <!-- Slide 2: ¿Qué es el Autoconocimiento? -->
             <div class="slide">
-                 <h2 class="text-2xl md:text-3xl font-bold text-indigo-600 mb-8 text-center flex items-center justify-center gap-3">
+                 <h2 id="s2-title" class="text-2xl md:text-3xl font-bold text-indigo-600 mb-8 text-center flex items-center justify-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                     ¿Qué es el Autoconocimiento?
                 </h2>
                  <div class="space-y-6 text-lg text-gray-700 bg-indigo-50 p-8 rounded-lg">
-                     <p>Es el conocimiento que tenemos de nosotros mismos, es decir, al conjunto de cosas que sabemos acerca de quiénes somos.</p>
-                     <p>Es un proceso de introspección que nos permite identificar nuestras <strong class="text-indigo-500">emociones, fortalezas, debilidades, valores y metas</strong>.</p>
-                     <p>Saber quién eres te da las herramientas para tomar mejores decisiones, gestionar tus emociones y construir relaciones más sanas.</p>
+                     <p id="s2-p1">Es el conocimiento que tenemos de nosotros mismos, es decir, al conjunto de cosas que sabemos acerca de quiénes somos.</p>
+                     <p id="s2-p2">Es un proceso de introspección que nos permite identificar nuestras <strong class="text-indigo-500">emociones, fortalezas, debilidades, valores y metas</strong>.</p>
+                     <p id="s2-p3">Saber quién eres te da las herramientas para tomar mejores decisiones, gestionar tus emociones y construir relaciones más sanas.</p>
                  </div>
             </div>
             
             <!-- Slide 3: Fases del proceso (Flip Cards) -->
             <div class="slide">
-                <h2 class="text-2xl md:text-3xl font-bold text-indigo-600 mb-8 text-center flex items-center justify-center gap-3">
+                <h2 id="s3-title" class="text-2xl md:text-3xl font-bold text-indigo-600 mb-8 text-center flex items-center justify-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
                     Fases del Proceso (Haz clic para girar)
                 </h2>
@@ -168,9 +168,9 @@
                     <div class="bg-green-500 text-white p-4 rounded-full w-24 h-24 flex items-center justify-center mb-8 shadow-lg">
                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M14.5 9.5 11 13l-2-2"/></svg>
                     </div>
-                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">El Viaje del Autoconocimiento</h2>
-                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Cultivar el autoconocimiento no es un destino, sino un viaje continuo. Cada paso te acerca a una vida más auténtica, consciente y plena. ¡Empieza hoy a explorarte!</p>
-                </div>
+                    <h2 id="s5-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">El Viaje del Autoconocimiento</h2>
+                    <p id="s5-p1" class="text-lg text-gray-700 max-w-3xl mx-auto">Cultivar el autoconocimiento no es un destino, sino un viaje continuo. Cada paso te acerca a una vida más auténtica, consciente y plena. ¡Empieza hoy a explorarte!</p>
+                 </div>
             </div>
         </div>
 
@@ -200,6 +200,20 @@
         const nextBtn = document.getElementById('nextBtn');
         const contentScroll = document.querySelector('#presentation-container .content-scroll');
         const quizTitleTextEl = document.getElementById('quiz-title-text');
+        // Text elements for i18n
+        const langHeadingEl = document.getElementById('lang-heading');
+        const langLabelEl = document.getElementById('lang-label');
+        const langHelperEl = document.getElementById('lang-helper');
+        const moduleLabelEl = document.getElementById('module-label');
+        const mainTitleEl = document.getElementById('main-title');
+        const mainSubtitleEl = document.getElementById('main-subtitle');
+        const s2TitleEl = document.getElementById('s2-title');
+        const s2p1El = document.getElementById('s2-p1');
+        const s2p2El = document.getElementById('s2-p2');
+        const s2p3El = document.getElementById('s2-p3');
+        const s3TitleEl = document.getElementById('s3-title');
+        const s5TitleEl = document.getElementById('s5-title');
+        const s5p1El = document.getElementById('s5-p1');
         const slideIndicator = document.getElementById('slide-indicator');
         const progressBar = document.getElementById('progress-bar');
         let currentSlide = 0;
@@ -209,6 +223,30 @@
         let lang = localStorage.getItem('lang') || 'es';
         const i18n = {
             es: {
+                // Global
+                navPrev: 'Anterior',
+                navNext: 'Siguiente',
+                navRestart: 'Reiniciar',
+                stepIndicator: (i, t) => `Paso ${i} de ${t}`,
+                // Language slide
+                langHeading: 'Idioma',
+                langLabel: 'Selecciona tu idioma',
+                langHelper: 'Usa el botón Siguiente para continuar',
+                // Title slide
+                moduleLabel: 'Módulo 1',
+                mainTitle: 'Cómo Cultivar tu Autoconocimiento',
+                mainSubtitle: 'Para una Vida Plena',
+                // Slide 2
+                s2Title: '¿Qué es el Autoconocimiento?',
+                s2p1: 'Es el conocimiento que tenemos de nosotros mismos, es decir, al conjunto de cosas que sabemos acerca de quiénes somos.',
+                s2p2: 'Es un proceso de introspección que nos permite identificar nuestras emociones, fortalezas, debilidades, valores y metas.',
+                s2p3: 'Saber quién eres te da las herramientas para tomar mejores decisiones, gestionar tus emociones y construir relaciones más sanas.',
+                // Slide 3
+                s3Title: 'Fases del Proceso (Haz clic para girar)',
+                // Slide 5
+                s5Title: 'El Viaje del Autoconocimiento',
+                s5p1: 'Cultivar el autoconocimiento no es un destino, sino un viaje continuo. Cada paso te acerca a una vida más auténtica, consciente y plena. ¡Empieza hoy a explorarte!',
+                // Quiz
                 quizTitle: 'Quiz Reflexivo',
                 nextButton: 'Siguiente',
                 feedbackCorrect: '¡Correcto!',
@@ -220,6 +258,30 @@
                 restartQuiz: 'Intentar de nuevo',
             },
             en: {
+                // Global (British English)
+                navPrev: 'Previous',
+                navNext: 'Next',
+                navRestart: 'Restart',
+                stepIndicator: (i, t) => `Step ${i} of ${t}`,
+                // Language slide
+                langHeading: 'Language',
+                langLabel: 'Select your language',
+                langHelper: 'Use the Next button to continue',
+                // Title slide
+                moduleLabel: 'Module 1',
+                mainTitle: 'How to Cultivate Self‑Knowledge',
+                mainSubtitle: 'For a Fulfilling Life',
+                // Slide 2
+                s2Title: 'What is Self‑Knowledge?',
+                s2p1: 'It is the knowledge we have of ourselves — what we know about who we are.',
+                s2p2: 'It is a process of introspection that helps us identify our emotions, strengths, weaknesses, values and goals.',
+                s2p3: 'Knowing who you are gives you the tools to make better decisions, manage your emotions and build healthier relationships.',
+                // Slide 3
+                s3Title: 'Process Phases (Click to flip)',
+                // Slide 5
+                s5Title: 'The Journey of Self‑Knowledge',
+                s5p1: 'Cultivating self‑knowledge is not a destination but an ongoing journey. Each step brings you closer to a more authentic, conscious and fulfilling life. Start exploring today!',
+                // Quiz
                 quizTitle: 'Reflective Quiz',
                 nextButton: 'Next',
                 feedbackCorrect: 'Correct!',
@@ -233,10 +295,35 @@
         };
 
         function applyLanguage() {
+            // Static text updates
+            if (langHeadingEl) langHeadingEl.textContent = i18n[lang].langHeading;
+            if (langLabelEl) langLabelEl.textContent = i18n[lang].langLabel;
+            if (langHelperEl) langHelperEl.textContent = i18n[lang].langHelper;
+
+            if (moduleLabelEl) moduleLabelEl.textContent = i18n[lang].moduleLabel;
+            if (mainTitleEl) mainTitleEl.textContent = i18n[lang].mainTitle;
+            if (mainSubtitleEl) mainSubtitleEl.textContent = i18n[lang].mainSubtitle;
+
+            if (s2TitleEl) s2TitleEl.childNodes[2].nodeValue = ' ' + i18n[lang].s2Title + '\n                ';
+            if (s2p1El) s2p1El.textContent = i18n[lang].s2p1;
+            if (s2p2El) s2p2El.innerHTML = i18n[lang].s2p2.replace('emociones', '<strong class="text-indigo-500">emociones</strong>')
+                                                  .replace('emotions', '<strong class="text-indigo-500">emotions</strong>');
+            if (s2p3El) s2p3El.textContent = i18n[lang].s2p3;
+
+            if (s3TitleEl) s3TitleEl.childNodes[2].nodeValue = ' ' + i18n[lang].s3Title + '\n                ';
+            if (s5TitleEl) s5TitleEl.textContent = i18n[lang].s5Title;
+            if (s5p1El) s5p1El.textContent = i18n[lang].s5p1;
+
             if (quizTitleTextEl) quizTitleTextEl.textContent = i18n[lang].quizTitle;
+
+            // Rebuild language-dependent components
+            createFlipCards();
             if (currentSlide === QUIZ_SLIDE_INDEX) {
                 loadQuiz();
             }
+
+            // Update nav labels immediately
+            updateNavigation();
         }
 
         function showSlide(n) {
@@ -252,11 +339,15 @@
         function updateNavigation() {
             prevBtn.disabled = currentSlide === 0;
             if (currentSlide === slides.length - 1) {
-                nextBtn.textContent = 'Reiniciar';
+                nextBtn.textContent = i18n[lang].navRestart;
             } else {
-                nextBtn.textContent = 'Siguiente';
+                nextBtn.textContent = i18n[lang].navNext;
             }
-            slideIndicator.textContent = `Paso ${currentSlide + 1} de ${slides.length}`;
+            // Update previous button label
+            prevBtn.textContent = i18n[lang].navPrev;
+
+            // Step indicator
+            slideIndicator.textContent = i18n[lang].stepIndicator(currentSlide + 1, slides.length);
             const progressPercentage = ((currentSlide + 1) / slides.length) * 100;
             progressBar.style.width = `${progressPercentage}%`;
 
@@ -304,18 +395,29 @@
         prevBtn.addEventListener('click', prevSlide);
         
         // --- Flip Card Logic (Slide 3) ---
-        const cardData = [
-            { title: 'Autopercepción', color: 'blue', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`, text: 'Capacidad de percibirnos a nosotros mismos como individuos con un conjunto de cualidades y características diferenciadoras.' },
-            { title: 'Autoobservación', color: 'green', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`, text: 'Implica el reconocimiento de nosotros mismos; de nuestras conductas, nuestras actitudes y las circunstancias que nos rodean.' },
-            { title: 'Memoria Autobiográfica', color: 'yellow', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"/></svg>`, text: 'Es la construcción de nuestra propia historia personal.' },
-            { title: 'Autoestima', color: 'red', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`, text: 'Se refiere a la valoración que hacemos de nosotros mismos.' },
-            { title: 'Automotivación', color: 'purple', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="m5 19 7-7 7 7"/></svg>`, text: 'Es la habilidad de dirigir nuestro estado emocional hacia la consecución de nuestras metas.' }
-        ];
+        const cardDataByLang = {
+            es: [
+                { title: 'Autopercepción', color: 'blue', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`, text: 'Capacidad de percibirnos a nosotros mismos como individuos con un conjunto de cualidades y características diferenciadoras.' },
+                { title: 'Autoobservación', color: 'green', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`, text: 'Implica el reconocimiento de nosotros mismos; de nuestras conductas, nuestras actitudes y las circunstancias que nos rodean.' },
+                { title: 'Memoria Autobiográfica', color: 'yellow', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"/></svg>`, text: 'Es la construcción de nuestra propia historia personal.' },
+                { title: 'Autoestima', color: 'red', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`, text: 'Se refiere a la valoración que hacemos de nosotros mismos.' },
+                { title: 'Automotivación', color: 'purple', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="m5 19 7-7 7 7"/></svg>`, text: 'Es la habilidad de dirigir nuestro estado emocional hacia la consecución de nuestras metas.' }
+            ],
+            en: [
+                { title: 'Self‑perception', color: 'blue', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`, text: 'The ability to perceive ourselves as individuals with a set of distinctive qualities and characteristics.' },
+                { title: 'Self‑observation', color: 'green', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`, text: 'Involves recognising ourselves — our behaviours, our attitudes and the circumstances around us.' },
+                { title: 'Autobiographical Memory', color: 'yellow', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"/></svg>`, text: 'It is the construction of our own personal story.' },
+                { title: 'Self‑esteem', color: 'red', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`, text: 'Refers to the evaluation we make of ourselves.' },
+                { title: 'Self‑motivation', color: 'purple', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="m5 19 7-7 7 7"/></svg>`, text: 'The ability to direct our emotional state towards achieving our goals.' }
+            ]
+        };
 
         function createFlipCards() {
-            const container = document.querySelector('#presentation-container .slide:nth-child(3) .grid');
-            container.innerHTML = ''; // Clear existing
-            cardData.forEach(data => {
+            const container = document.querySelector('#presentation-container .slide:nth-child(4) .grid');
+            if (!container) return;
+            container.innerHTML = '';
+            const cards = cardDataByLang[lang];
+            cards.forEach(data => {
                 const cardHTML = `
                     <div class="card-flip">
                         <div class="card-flip-inner">
