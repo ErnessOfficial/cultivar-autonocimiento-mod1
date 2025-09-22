@@ -221,6 +221,15 @@
 
         // --- Language / Idioma ---
         let lang = localStorage.getItem('lang') || 'es';
+        // URL param overrides localStorage (e.g., ?lang=en or ?lang=es)
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            if (urlLang && (urlLang === 'en' || urlLang === 'es')) {
+                lang = urlLang;
+                localStorage.setItem('lang', lang);
+            }
+        } catch (_) {}
         const i18n = {
             es: {
                 // Global
@@ -583,6 +592,13 @@
                 languageSelectEl.addEventListener('change', (e) => {
                     lang = e.target.value;
                     localStorage.setItem('lang', lang);
+                    // Reflect language in URL without reloading
+                    try {
+                        const params = new URLSearchParams(window.location.search);
+                        params.set('lang', lang);
+                        const newUrl = `${location.pathname}?${params.toString()}${location.hash}`;
+                        history.replaceState(null, '', newUrl);
+                    } catch (_) {}
                     applyLanguage();
                 });
             }
