@@ -118,6 +118,7 @@
             <!-- Slide 1: Título -->
             <div class="slide">
                 <div class="flex flex-col items-center justify-center h-full text-center">
+                    <img src="Gemini_Generated_Image_ud11y2ud11y2ud11.png" alt="Imagen módulo" class="w-24 h-24 object-contain mb-3 opacity-95"/>
                     <h2 id="module-label" class="text-2xl font-semibold text-indigo-500 mb-4">Módulo 1</h2>
                     <div class="bg-indigo-600 text-white p-4 rounded-full w-24 h-24 flex items-center justify-center mb-8 shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 18a7 7 0 1 0-7-7c0 1.42.42 2.74 1.17 3.82l-2.06 2.06a1 1 0 0 0 1.41 1.41l2.06-2.06A6.95 6.95 0 0 0 11 18Z"/><path d="m2 2 1.17 1.17"/><path d="M22 22 20 20"/><path d="m2 22 2-2"/><path d="m22 2-2 2"/></svg>
@@ -165,6 +166,7 @@
             <!-- Slide 5: Conclusión -->
             <div class="slide">
                  <div class="flex flex-col items-center justify-center h-full text-center">
+                    <img src="Gemini_Generated_Image_ud11y2ud11y2ud11.png" alt="Imagen conclusión" class="w-24 h-24 object-contain mb-3 opacity-95"/>
                     <div class="bg-green-500 text-white p-4 rounded-full w-24 h-24 flex items-center justify-center mb-8 shadow-lg">
                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M14.5 9.5 11 13l-2-2"/></svg>
                     </div>
@@ -174,7 +176,7 @@
             </div>
         </div>
 
-        <div class="absolute bottom-24 left-1/2 -translate-x-1/2 text-xs text-gray-500 text-center px-4">
+        <div id="footer-container" class="absolute bottom-24 left-1/2 -translate-x-1/2 text-xs text-gray-500 text-center px-4">
             <span id="footer-text">este modulo 1 es gratuito. si deseas continuar con tu formacion puedes acceder a la web de Animikdemi :</span>
             <a id="footer-link" href="https://www.animikdemi.entrepalabrasurgentes.com" target="_blank" rel="noopener" class="underline text-indigo-600">www.animikdemi.entrepalabrasurgentes.com</a>.
         </div>
@@ -218,6 +220,7 @@
         const s5TitleEl = document.getElementById('s5-title');
         const s5p1El = document.getElementById('s5-p1');
         const footerTextEl = document.getElementById('footer-text');
+        const footerContainer = document.getElementById('footer-container');
         const slideIndicator = document.getElementById('slide-indicator');
         const progressBar = document.getElementById('progress-bar');
         let currentSlide = 0;
@@ -382,6 +385,12 @@
                 nextBtn.disabled = true;
             } else {
                 nextBtn.disabled = false;
+            }
+
+            // Show footer note only on first content slide and last slide
+            if (footerContainer) {
+                const showFooter = (currentSlide === 1) || (currentSlide === slides.length - 1);
+                footerContainer.style.display = showFooter ? 'block' : 'none';
             }
         }
 
