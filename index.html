@@ -333,6 +333,10 @@
                     slide.classList.add('active');
                 }
             });
+            // If entering the quiz slide, build quiz with current language
+            if (n === QUIZ_SLIDE_INDEX) {
+                try { loadQuiz(); } catch (_) {}
+            }
             updateNavigation();
         }
 
@@ -585,7 +589,6 @@
 
             createFlipCards();
             applyLanguage();
-            loadQuiz();
             showSlide(currentSlide);
         });
     </script>
