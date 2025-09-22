@@ -185,6 +185,7 @@
         const slides = document.querySelectorAll('.slide');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
+        const contentScroll = document.querySelector('#presentation-container .content-scroll');
         const slideIndicator = document.getElementById('slide-indicator');
         const progressBar = document.getElementById('progress-bar');
         let currentSlide = 0;
@@ -203,7 +204,7 @@
         function updateNavigation() {
             prevBtn.disabled = currentSlide === 0;
             if (currentSlide === slides.length - 1) {
-                nextBtn.textContent = 'Finalizar';
+                nextBtn.textContent = 'Reiniciar';
             } else {
                 nextBtn.textContent = 'Siguiente';
             }
@@ -226,6 +227,24 @@
             }
         }
 
+        function restartPresentation() {
+            currentSlide = 0;
+            showSlide(currentSlide);
+            // Reset quiz to initial state
+            try { loadQuiz(); } catch (_) {}
+            // Scroll contenido al inicio
+            try { contentScroll && contentScroll.scrollTo({ top: 0, behavior: 'smooth' }); } catch (_) {}
+        }
+
+        function handleNextButtonClick() {
+            if (currentSlide === slides.length - 1) {
+                // En última diapositiva: reiniciar
+                restartPresentation();
+            } else {
+                nextSlide();
+            }
+        }
+
         function prevSlide() {
             if (currentSlide > 0) {
                 currentSlide--;
@@ -233,7 +252,7 @@
             }
         }
 
-        nextBtn.addEventListener('click', nextSlide);
+        nextBtn.addEventListener('click', handleNextButtonClick);
         prevBtn.addEventListener('click', prevSlide);
         
         // --- Flip Card Logic (Slide 3) ---
